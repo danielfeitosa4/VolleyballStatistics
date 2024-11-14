@@ -27,8 +27,8 @@ namespace VolleyballStatistics.Domain.Entities
         // Pontuação e resultado final
         public int? WinningTeam { get; private set; } // 1 ou 2 para indicar o vencedor (ou null se não finalizado)
         public int NumberOfSets { get; private set; } // Define se o jogo será de 3 ou 5 sets
-
         public ICollection<Set> Sets { get; private set; } = new List<Set>();
+
         public EventType EventType { get; private set; }
         public string Location { get; private set; }
         public ICollection<EventParticipation> Participations { get; set; } = new List<EventParticipation>();
@@ -37,5 +37,19 @@ namespace VolleyballStatistics.Domain.Entities
         {
             Participations.Add(participation);
         }
+
+        public void SetWinner()
+        {
+            // Contabilizar os sets vencidos por cada equipe
+            var setsWonTeamOne = Sets.Count(s => s.WinnerSet == 1);
+            var setsWonTeamTwo = Sets.Count(s => s.WinnerSet == 2);
+
+            // Condição para determinar vencedor com base no número de sets possíveis
+            if (setsWonTeamOne >= (NumberOfSets / 2 + 1) || setsWonTeamTwo >= (NumberOfSets / 2 + 1))
+            {
+                WinningTeam = setsWonTeamOne > setsWonTeamTwo ? 1 : 2;
+            }
+        }
+
     }
 }

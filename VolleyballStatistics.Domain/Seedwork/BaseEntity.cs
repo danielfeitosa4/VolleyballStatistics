@@ -2,6 +2,6 @@
 {
     public abstract class BaseEntity
     {
-        public long Id { get; protected set; }
+        public int Id { get; set; } // Alterado para public por conta do Entity Framework, pois ele realiza o tracking e mapeamento através dela.
     }
 }

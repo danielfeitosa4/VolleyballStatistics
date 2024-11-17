@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\VolleyballStatistics.Application\VolleyballStatistics.Application.csproj" />
     <ProjectReference Include="..\VolleyballStatistics.Domain\VolleyballStatistics.Domain.csproj" />
     <ProjectReference Include="..\VolleyballStatistics.Infra.Data\VolleyballStatistics.Infra.Data.csproj" />

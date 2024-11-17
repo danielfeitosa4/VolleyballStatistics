@@ -3,8 +3,10 @@ using VolleyballStatistics.Domain.Seedwork;
 
 namespace VolleyballStatistics.Domain.Entities
 {
-    public class PlayerStatistics : BaseEntity
+    public sealed class PlayerStatistics : BaseEntity
     {
+        public PlayerStatistics() { } // Para frameworks de persistência
+
         public PlayerStatistics(EventParticipation eventParticipation, ActionType actionType, int right, int wrong)
         {
             EventParticipation = eventParticipation;

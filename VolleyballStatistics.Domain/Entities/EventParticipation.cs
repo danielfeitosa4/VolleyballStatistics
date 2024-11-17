@@ -3,8 +3,10 @@ using VolleyballStatistics.Domain.Seedwork;
 
 namespace VolleyballStatistics.Domain.Entities
 {
-    public class EventParticipation : BaseEntity
+    public sealed class EventParticipation : BaseEntity
     {
+        public EventParticipation() { } // Para frameworks de persistência
+
         public EventParticipation(Person person, Event @event, Paper paper)
         {
             Person = person;
@@ -17,7 +19,7 @@ namespace VolleyballStatistics.Domain.Entities
         public int EventId { get; private set; }
         public Event Event { get; private set; }
         public Paper Paper { get; private set; }
-        public ICollection<PlayerStatistics> Statisticss { get; set; } = new List<PlayerStatistics>();
+        public ICollection<PlayerStatistics> Statisticss { get; set; } = new HashSet<PlayerStatistics>();
 
         public void AddStatistic(PlayerStatistics statistic)
         {

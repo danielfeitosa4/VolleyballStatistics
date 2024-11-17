@@ -2,8 +2,10 @@
 
 namespace VolleyballStatistics.Domain.Entities
 {
-    public class Report : BaseEntity
+    public sealed class Report : BaseEntity
     {
+        public Report() { } // Para frameworks de persistência
+
         public Report(Event @event, Person athlete, int totallyRight, int totallyWrong)
         {
             Event = @event;

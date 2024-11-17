@@ -2,8 +2,10 @@
 
 namespace VolleyballStatistics.Domain.Entities
 {
-    public class Set : BaseEntity
+    public sealed class Set : BaseEntity
     {
+        public Set() { } // Para frameworks de persistência
+
         public Set(Event @event, int numberSet, int scoreTeamOne, int scoreTeamTwo)
         {
             Event = @event;

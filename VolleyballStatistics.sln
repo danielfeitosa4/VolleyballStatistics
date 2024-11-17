@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35208.52
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VolleyballStatistics.Domain", "VolleyballStatistics.Domain\VolleyballStatistics.Domain.csproj", "{38FE4CE4-BF64-4AE3-AB07-E037B29E3EB9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VolleyballStatistics.Domain", "VolleyballStatistics.Domain\VolleyballStatistics.Domain.csproj", "{38FE4CE4-BF64-4AE3-AB07-E037B29E3EB9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VolleyballStatistics.Application", "VolleyballStatistics.Application\VolleyballStatistics.Application.csproj", "{286CCE84-24A8-49BE-BBDA-66B8F6848349}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VolleyballStatistics.Application", "VolleyballStatistics.Application\VolleyballStatistics.Application.csproj", "{286CCE84-24A8-49BE-BBDA-66B8F6848349}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VolleyballStatistics.Infra.Data", "VolleyballStatistics.Infra.Data\VolleyballStatistics.Infra.Data.csproj", "{EE6BBF79-9DDA-425E-9766-2FA780B63AA2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VolleyballStatistics.Infra.Data", "VolleyballStatistics.Infra.Data\VolleyballStatistics.Infra.Data.csproj", "{EE6BBF79-9DDA-425E-9766-2FA780B63AA2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VolleyballStatistics.Infra.IoC", "VolleyballStatistics.Infra.IoC\VolleyballStatistics.Infra.IoC.csproj", "{658EC390-00B4-4E90-8F9F-771A3D0D6B4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VolleyballStatistics.Infra.IoC", "VolleyballStatistics.Infra.IoC\VolleyballStatistics.Infra.IoC.csproj", "{658EC390-00B4-4E90-8F9F-771A3D0D6B4C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VolleyballStatistics.API", "VolleyballStatistics.API\VolleyballStatistics.API.csproj", "{D0ACD862-873E-4355-A0C7-99E297AC7CA3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VolleyballStatistics.API", "VolleyballStatistics.API\VolleyballStatistics.API.csproj", "{D0ACD862-873E-4355-A0C7-99E297AC7CA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VolleyballStatistics.Tests", "VolleyballStatistics.Tests\VolleyballStatistics.Tests.csproj", "{DAFE2C0D-2B3C-4500-A4A4-883C49DE7834}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{D0ACD862-873E-4355-A0C7-99E297AC7CA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0ACD862-873E-4355-A0C7-99E297AC7CA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0ACD862-873E-4355-A0C7-99E297AC7CA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAFE2C0D-2B3C-4500-A4A4-883C49DE7834}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAFE2C0D-2B3C-4500-A4A4-883C49DE7834}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAFE2C0D-2B3C-4500-A4A4-883C49DE7834}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAFE2C0D-2B3C-4500-A4A4-883C49DE7834}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

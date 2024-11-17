@@ -3,8 +3,10 @@ using VolleyballStatistics.Domain.Seedwork;
 
 namespace VolleyballStatistics.Domain.Entities
 {
-    public class Event : BaseEntity
+    public sealed class Event : BaseEntity
     {
+        public Event() { } // Para frameworks de persistência
+
         public Event(string title, DateTime date, string nameTeamOne, string nameTeamTwo, int numberOfSets, ICollection<Set> sets, EventType eventType, string location)
         {
             Title = title;
@@ -27,11 +29,11 @@ namespace VolleyballStatistics.Domain.Entities
         // Pontuação e resultado final
         public int? WinningTeam { get; private set; } // 1 ou 2 para indicar o vencedor (ou null se não finalizado)
         public int NumberOfSets { get; private set; } // Define se o jogo será de 3 ou 5 sets
-        public ICollection<Set> Sets { get; private set; } = new List<Set>();
+        public ICollection<Set> Sets { get; private set; } = new HashSet<Set>();
 
         public EventType EventType { get; private set; }
         public string Location { get; private set; }
-        public ICollection<EventParticipation> Participations { get; set; } = new List<EventParticipation>();
+        public ICollection<EventParticipation> Participations { get; set; } = new HashSet<EventParticipation>();
 
         public void AddParticipation(EventParticipation participation)
         {

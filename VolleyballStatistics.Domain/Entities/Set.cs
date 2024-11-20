@@ -14,8 +14,8 @@ namespace VolleyballStatistics.Domain.Entities
             ScoreTeamTwo = scoreTeamTwo;
         }
 
-        public int EventId { get; private set; }
-        public Event Event { get; private set; }
+        public int EventId { get; set; }
+        public Event Event { get; set; }
         public int NumberSet { get; private set; }
         public int ScoreTeamOne { get; private set; }
         public int ScoreTeamTwo { get; private set; }

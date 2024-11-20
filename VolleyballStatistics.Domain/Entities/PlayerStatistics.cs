@@ -15,8 +15,8 @@ namespace VolleyballStatistics.Domain.Entities
             Wrong = wrong;
         }
 
-        public int EventParticipationId { get; private set; }
-        public EventParticipation EventParticipation { get; private set; }
+        public int EventParticipationId { get; set; }
+        public EventParticipation EventParticipation { get; set; }
         public ActionType ActionType { get; private set; }
         public int Right { get; private set; }
         public int Wrong { get; private set; }

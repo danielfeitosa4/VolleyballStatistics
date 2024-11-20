@@ -14,10 +14,10 @@ namespace VolleyballStatistics.Domain.Entities
             TotallyWrong = totallyWrong;
         }
 
-        public int EventId { get; private set; }
-        public Event Event { get; private set; }
-        public int AthleteId { get; private set; }
-        public Person Athlete { get; private set; }
+        public int EventId { get; set; }
+        public Event Event { get; set; }
+        public int AthleteId { get; set; }
+        public Person Athlete { get; set; }
         public int TotallyRight { get; private set; }
         public int TotallyWrong { get; private set; }
     }

@@ -48,26 +48,26 @@ namespace VolleyballStatistics.Domain.Seedwork
         }
 
         // Métodos do domínio (comportamentos)
-        public void AlterarEmail(string novoEmail)
+        public void ChangeEmail(string newEmail)
         {
-            Email = ValidateEmail(novoEmail);
+            Email = ValidateEmail(newEmail);
             // Você pode disparar eventos de domínio aqui, como "EmailAlterado"
         }
 
-        public void AlterarNome(string novoNome)
+        public void ChangeName(string newName)
         {
-            Name = ValidateName(novoNome);
+            Name = ValidateName(newName);
         }
 
-        public int CalcularIdade()
+        public int CalculateAge()
         {
-            var hoje = DateTime.Today;
-            var idade = hoje.Year - DateOfBirth.Year;
+            var today = DateTime.Today;
+            var age = today.Year - DateOfBirth.Year;
 
-            if (DateOfBirth > hoje.AddYears(-idade))
-                idade--;
+            if (DateOfBirth > today.AddYears(-age))
+                age--;
 
-            return idade;
+            return age;
         }
 
         // Validações privadas:

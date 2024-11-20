@@ -14,10 +14,10 @@ namespace VolleyballStatistics.Domain.Entities
             Paper = paper;
         }
 
-        public int PersonId { get; private set; }
-        public Person Person { get; private set; }
-        public int EventId { get; private set; }
-        public Event Event { get; private set; }
+        public int PersonId { get; set; }
+        public Person Person { get; set; }
+        public int EventId { get; set; }
+        public Event Event { get; set; }
         public Paper Paper { get; private set; }
         public ICollection<PlayerStatistics> Statisticss { get; set; } = new HashSet<PlayerStatistics>();
 
